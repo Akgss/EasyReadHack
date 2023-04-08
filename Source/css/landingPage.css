@@ -111,7 +111,8 @@ body {
     height: 100px;
     line-height: 50;
     margin: 0;
-    padding: 30px;
+    padding: 0;
+    margin-top: 30px;
     text-align: center;
     color: var(--text-primary);
     font-size: 30px;
@@ -306,7 +307,7 @@ body {
     padding: 0;
     margin: 0;
     background: var(--accent-primary);
-    font-size: 1.2em;
+    font-size: 20px;
 }
 
 .container .content .page .grid .card .head .stat {
@@ -657,7 +658,6 @@ body {
     position: relative;
     line-height: 60px;
     color: var(--text-primary);
-    font-size: 1.4em;
 }
 
 .container .content .page .grid .user-edit .header a.button {
