@@ -109,12 +109,12 @@ body {
     position: relative;
     width: 100px;
     height: 100px;
-    line-height: 100px;
+    line-height: 50;
     margin: 0;
-    padding: 0;
+    padding: 30px;
     text-align: center;
     color: var(--text-primary);
-    font-size: 40px;
+    font-size: 30px;
     opacity: 0.6;
     box-sizing: border-box;
 

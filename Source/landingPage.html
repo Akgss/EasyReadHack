@@ -2,17 +2,32 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <div class="container">
     <div class="drawer">
-        <a class="navicon" href="#"><i class="icon ion-navicon"></i></a>
+        <a class="navicon" href="#">
+            <ion-icon name="home-outline"></ion-icon>
+        </a>
         <div class="menu">
-            <a data-menu="dashboard" href="#" class="active"><i class="	fa fa-address-book-osa"></i></a>
-            <a data-menu="users" href="#"><i class="icon ion-person-stalker"></i></a>
-            <a data-dialog="logout" href="#"><i class="icon ion-log-out"></i></a>
-            <a data-menu="download" href="#"><i class="icon ion-code-download"></i></a>
-            <a data-menu="about" href="#"><i class="icon ion-information-circled"></i></a>
+            <a data-menu="dashboard" href="#">
+                <ion-icon name="newspaper-outline"></ion-icon>
+            </a>
+            <a data-menu="users" href="#">
+                <ion-icon name="document-text-outline"></ion-icon>
+            </a>
+            <a data-dialog="logout" href="#">
+                <ion-icon name="document-outline"></ion-icon>
+            </a>
+            <a data-menu="download" href="#">
+                <ion-icon name="settings-outline"></ion-icon>
+            </a>
+            <a data-menu="about" href="#">
+                <ion-icon name="exit-outline"></ion-icon>
+            </a>
         </div>
-        <span class="credits">uplusion23</span>
+        <span class="credits">EasyRead
+        </span>
     </div>
     <div class="content">
         <div class="page active" data-page="dashboard">
@@ -28,7 +43,7 @@
                             <i class="icon ion-pound"></i>
                         </span>
                         <span class="stat">
-                            Server Status
+                            How To Use
                         </span>
                         <div class="status">
                         </div>
