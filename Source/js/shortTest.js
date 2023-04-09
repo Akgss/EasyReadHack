@@ -5,7 +5,7 @@ import cors from "cors";
 
 const configuration = new Configuration({
     organization: "org-mc3TBzy1vbmzjMrxwkXSrbvy",
-    apiKey: "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",
+    apiKey: "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",
 });
 
 const openai = new OpenAIApi(configuration);
