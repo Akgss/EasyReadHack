@@ -359,14 +359,18 @@ body {
 .container .content .page .grid .card .head .icon {
     display: block;
     width: 75px;
-    height: 75px;
+    height: 50px;
     line-height: 75px;
     text-align: center;
     padding: 0;
-    margin: 0;
-    background: var(--accent-primary);
+    margin-left: 20;
+    border: #16191C;
+    border-radius: 5px;
+    background: #5d6165;
     font-size: 20px;
 }
+
+
 
 .container .content .page .grid .card .head .stat {
     display: block;
@@ -463,8 +467,8 @@ body {
 .container .content .page .grid .card .footer .user .user-icon {
     display: block;
     position: relative;
-    height: 50px;
-    width: 50px;
+    height: 50;
+    width: 80;
     border-radius: 25px;
     padding: 0;
     margin: 0 20px 0 0;
@@ -699,24 +703,19 @@ body {
     box-sizing: border-box;
 }
 
-.container .content .page .grid .user-edit .header .icon {
+.container .content .page .grid .card .head .icon2 {
     display: inline-block;
     position: relative;
-    width: 60px;
-    height: 60px;
+    height: 50;
+    width: 75;
     padding: 0;
-    margin: 0 20px 0 0;
+    border-radius: 5px;
+    margin: 20 0 5 0;
     box-sizing: border-box;
     text-align: center;
-    background: var(--accent-primary);
+    background-color: #5d6165;
 }
 
-.container .content .page .grid .user-edit .header .icon i {
-    display: block;
-    position: relative;
-    line-height: 60px;
-    color: var(--text-primary);
-}
 
 .container .content .page .grid .user-edit .header a.button {
     display: inline-block;
@@ -909,4 +908,17 @@ body {
 
 .container .dialog .dialog-block .controls .button:hover {
     background: rgba(255, 255, 255, 0.1);
+}
+
+
+.icon {
+    color: black;
+    position: relative;
+    left: -20px;
+    top: 20px;
+}
+
+.icon-container {
+    margin-top: 15px;
+    transform: scale(2);
 }
