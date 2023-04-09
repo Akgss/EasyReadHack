@@ -17,17 +17,36 @@ main {
 h1 {
     font-size: 2rem;
     margin-bottom: 20px;
+    margin: 0;
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
 }
 
 form {
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 input[type="text"] {
+    margin: 0;
+    position: absolute;
+    height: 10%;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-color: lightgray;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #16191C;
+    color: lightgray;
     padding: 10px;
-    border: none;
     border-bottom: 2px solid #ccc;
     font-size: 1.2rem;
     width: 70%;
@@ -35,18 +54,23 @@ input[type="text"] {
 }
 
 button[type="submit"] {
+    margin: 0;
+    position: absolute;
+    width: 70%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 150%);
     padding: 10px 20px;
-    border: none;
-    background-color: #2ecc71;
-    color: #fff;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: lightgray;
     font-size: 1.2rem;
+    background-color: #16191C;
+    color: lightgray;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
 }
 
-button[type="submit"]:hover {
-    background-color: #27ae60;
-}
 
 #chat-log {
     margin-top: 20px;
@@ -58,8 +82,17 @@ button[type="submit"]:hover {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
-    max-width: 80%;
+    max-width: 70%;
     align-self: flex-start;
+    height: 5%;
+    margin: 0;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    overflow: scroll;
 }
 
 .message--sent .message__text {
