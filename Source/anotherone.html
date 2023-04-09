@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="./css/test.css">
+<link rel="stylesheet" type="text/css" href="./css/anotherone.css">
+<script type="module" src="/Source/js/test.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/landingPage.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<html lang="en">
+<div class="container">
+    <div class="drawer">
+        <a class="navicon" href="landingPage.html">
+            <ion-icon name="home-outline"></ion-icon>
+        </a>
+        <div class="menu">
+            <a data-menu="dashboard" href="Summary.html">
+                <ion-icon name="newspaper-outline"></ion-icon>
+            </a>
+            <a data-menu="users" href="longTest.html">
+                <ion-icon name="document-text-outline"></ion-icon>
+            </a>
+            <a data-dialog="logout" href="shortTest.html">
+                <ion-icon name="document-outline"></ion-icon>
+            </a>
+            <a data-menu="download" href="settings.html">
+                <ion-icon name="settings-outline"></ion-icon>
+            </a>
+            <a data-menu="about" href="index.html">
+                <ion-icon name="exit-outline"></ion-icon>
+            </a>
+        </div>
+        <span class="credits">EasyRead
+        </span>
+    </div>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ChatGPT API</title>
+    </head>
+
+    <body>
+        <main>
+            <h1>Enter Text</h1>
+            <form action="">
+                <input type="text" name="message" id="message">
+                <button type="submit">Send</button>
+            </form>
+            <div id="chat-log">
+
+            </div>
+        </main>
+        <script>
+            var summaryValue = 1;
+            const chatLog = document.getElementById('chat-log');
+            const message = document.getElementById('message');
+            const form = document.querySelector('form');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const messageText = message.value;
+
+                //Storage system here
+                var summaryText1 = "summary" + summaryValue;
+
+                //Storing on the local Storage (chatGPT input)
+                localStorage.setItem(summaryText1, messageText);
+
+                //Not Really Necessary
+                chatLog.scrollTop = chatLog.scrollHeight;
+
+                //Incrementing value
+                summaryValue = summaryValue + 1;
+
+                const messageElement = document.createElement('div');
+                messageElement.classList.add('message');
+                messageElement.classList.add('message--sent');
+                messageElement.innerHTML = `
+                <div class "message__text">${messageText}</div>
+            `;
+                chatLog.appendChild(messageElement);
+                chatLog.scrollTop = chatLog.scrollHeight;
+                fetch('http://localhost:3700', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        message: messageText
+                    })
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        const messageElement = document.createElement('div');
+                        messageElement.classList.add('message');
+                        messageElement.classList.add('message--received');
+                        messageElement.innerHTML = `
+                    <div class = "message__text">${data.completion.content}</div>
+                `;
+                        chatLog.appendChild(messageElement);
+                        chatLog.scrollTop = chatLog.scrollHeight;
+                    })
+
+                //Storage system here
+                var summaryText2 = "summary" + summaryValue;
+
+                //Storing on the local Storage (chatGPT input)
+                localStorage.setItem(summaryText2, messageText);
+
+                //Not Really Necessary
+                chatLog.scrollTop = chatLog.scrollHeight;
+
+                //Incrementing value
+                summaryValue = summaryValue + 1;
+
+                message.value = '';
+
+            })
+
+
+        // Storage would look like this
+        //  Key:            Value:
+        //  summary1        user-input
+        //  summary2        chatGPT-input
+        //  longText1       user-input
+        //  longText2       chatGPT-input
+        //  summary3        user-input
+        //  summary4        chatGPT-input
+        //
+        // *All odd keys are user inputs while even keys are made by AI
+        // Use localStorage.getItem('summary1') to extract info. 
+        </script>
+    </body>
+
+</html>

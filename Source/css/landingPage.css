@@ -21,7 +21,7 @@ Todo list;
     --accent-primary-transparent: rgba(54, 80, 209, 0);
     --status-red: #EF4836;
     --status-green: #36D744;
-    
+
 }
 
 textarea {
@@ -37,24 +37,24 @@ textarea {
     color: #86909A;
     outline: none;
     resize: none;
-  }
+}
 
-  .footer .user .user-icon .username {
+.footer .user .user-icon .username {
     margin-left: 80px;
-  }
-  
-  /* Add a hover effect */
-  textarea:hover {
+}
+
+/* Add a hover effect */
+textarea:hover {
     background-color: #86909A;
-  }
-  
-  /* Add a focus effect */
-  textarea:focus {
+}
+
+/* Add a focus effect */
+textarea:focus {
     background-color: #86909A;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #007FFF;
-  }
+}
 
-  
+
 
 button[type="msghistory"] {
     display: inline-block;
@@ -72,14 +72,14 @@ button[type="msghistory"] {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
     transition: all 0.3s ease;
     cursor: pointer;
-  }
-  
-  button[type="msghistory"]:hover {
+}
+
+button[type="msghistory"]:hover {
     background-color: #374148;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 5);
     transform: translateY(-3px);
-  }
-  
+}
+
 
 ::-webkit-scrollbar {
     width: 4px;
