@@ -40,7 +40,7 @@ textarea {
 }
 
 .footer .user .user-icon .username {
-    margin-left: 80px;
+    margin-left: 0;
 }
 
 /* Add a hover effect */
@@ -357,17 +357,16 @@ body {
 }
 
 .container .content .page .grid .card .head .icon {
-    display: block;
-    width: 75px;
-    height: 50px;
-    line-height: 75px;
-    text-align: center;
+    display: inline-block;
+    position: relative;
+    height: 50;
+    width: 75;
     padding: 0;
-    margin-left: 20;
-    border: #16191C;
     border-radius: 5px;
-    background: #5d6165;
-    font-size: 20px;
+    margin: 20 0 5 0;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #5d6165;
 }
 
 
@@ -380,6 +379,7 @@ body {
     text-align: center;
     padding: 0 20px;
     margin: 0;
+    margin-top: 10px;
 }
 
 .container .content .page .grid .card .head .status {
@@ -404,6 +404,7 @@ body {
     top: 50%;
     left: -100%;
     transform: translateY(-50%);
+    margin-top: 10px;
 }
 
 .container .content .page .grid .card .head .status.up:after {
@@ -468,10 +469,10 @@ body {
     display: block;
     position: relative;
     height: 50;
-    width: 80;
+    width: 50;
     border-radius: 25px;
     padding: 0;
-    margin: 0 20px 0 0;
+    margin: 0 100 0 0;
     background: var(--background-secondary);
     float: left;
 }
@@ -484,6 +485,7 @@ body {
     font-weight: 300;
     font-size: 18px;
     float: left;
+    margin-left: 100px;
 }
 
 .container .content .page .grid .card-verticle {
@@ -521,6 +523,15 @@ body {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
+}
+
+.container .content .page .grid .card-verticle .card-small .icon-container2 {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-left: 3520;
+    margin-bottom: 4000px;
+    transform: scale(25);
 }
 
 .container .content .page .grid .card-verticle .card-small .text {
@@ -910,15 +921,13 @@ body {
     background: rgba(255, 255, 255, 0.1);
 }
 
-
-.icon {
-    color: black;
-    position: relative;
-    left: -20px;
-    top: 20px;
-}
-
 .icon-container {
     margin-top: 15px;
     transform: scale(2);
+}
+
+.stat {
+    font-size: 30px; /* sets the font size to 16 pixels */
+    font-weight: bold; /* makes the text bold */
+    margin-top: 50px;
 }
