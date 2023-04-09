@@ -11,7 +11,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const app = express();
-const port = 8000;
+const port = 4000;
 
 app.use(bodyParser.json());
 app.use(cors());
@@ -26,7 +26,7 @@ app.post("/", async (req, res) => {
         model: "gpt-3.5-turbo",
         messages: [
             //Change the text based on what type of response you want
-            { role: "user", content: `Summarize the following: ${message}` },
+            { role: "user", content: `Create a long answer test based off of the following article: ${message}` },
         ]
     })
 
@@ -35,6 +35,8 @@ app.post("/", async (req, res) => {
     })
 
 })
+
+
 
 app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
