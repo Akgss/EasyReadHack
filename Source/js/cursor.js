@@ -10,12 +10,12 @@ const follower = document.createElement('div')
 follower.classList.add('cursor', 'cursor__follower')
 root.appendChild(follower)
 
-
 root.addEventListener('mousemove', (e) => {
   setPosition(follower, e)
   setPosition(cursor, e)
+  scrolling = false;
 })
 
 function setPosition(element, e) {
-  element.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`
+  element.style.transform = `translate3d(${e.clientX + window.scrollX}px, ${e.clientY + window.scrollY}px, 0)`
 }
