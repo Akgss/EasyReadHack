@@ -11,7 +11,7 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const app = express();
-const port = 4000;
+const port = 8000;
 
 app.use(bodyParser.json());
 app.use(cors());

@@ -1,4 +1,91 @@
-/* Default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #16191C;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+main {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    margin-bottom: 20px;
+    color: lightgray;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #fff;
+    border: none;
+    color: lightgray;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #738adb;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #6b7dbd;
+}
+
+#chat-log {
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.message {
+    margin-bottom: 10px;
+    color: lightgray;
+}
+
+.message--sent .message__text {
+    background-color: #738adb;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 80%;
+    /* Changed from 100% */
+    margin-left: auto;
+}
+
+.message--received .message__text {
+    height: 100%;
+    color: lightgray;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 100%;
+    margin-right: auto;
+}
+
+.message__text {
+    word-wrap: break-word;
+    max-width: 100%;
+    /* Added for cases where .message__text is not under .message--sent or .message--received */
+}
+
+/* Default styles
 
 body {
     margin: 0;
@@ -42,11 +129,11 @@ input[type="text"] {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     border-color: lightgray;
-    border-radius: 5px;
     font-size: 1.2rem;
     background-color: #16191C;
-    color: lightgray;
+    color: green;
     padding: 10px;
+    border: none;
     border-bottom: 2px solid #ccc;
     font-size: 1.2rem;
     width: 70%;
@@ -102,9 +189,13 @@ button[type="submit"] {
 }
 
 .message--received .message__text {
-    background-color: #ccc;
+    background-color: #2ecc71;
     color: #333;
     align-self: flex-start;
+    top: 100%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .message__text {
@@ -114,11 +205,11 @@ button[type="submit"] {
     word-break: break-word;
     line-height: 1.4;
     margin-bottom: 5px;
-}
+} */
 
 /* Responsive styles */
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
     input[type="text"] {
         width: 60%;
     }
@@ -128,4 +219,4 @@ button[type="submit"] {
     input[type="text"] {
         width: 50%;
     }
-}
+} */
