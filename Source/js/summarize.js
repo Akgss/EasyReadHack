@@ -5,13 +5,13 @@ import cors from "cors";
 
 const configuration = new Configuration({
     organization: "org-mc3TBzy1vbmzjMrxwkXSrbvy",
-    apiKey: "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",
+    apiKey: "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",
 });
 
 const openai = new OpenAIApi(configuration);
 
 const app = express();
-const port = 8000;
+const port = 9000;
 
 app.use(bodyParser.json());
 app.use(cors());
