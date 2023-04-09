@@ -61,7 +61,12 @@
               and prepare for exams efficiently.</p>
             <div class="jumbotron-buttons">
               <button class="btn" onclick="location.href='#features'">Features</button>
-              <button class="btn blue" onclick="location.href='#'">Get Started</button>
+                <button class="btn blue" onclick="validateAndRedirect()">Get Started</button>
+              <script>
+                function validateAndRedirect() {
+                  window.location.href = "register.html";
+                }
+              </script>
             </div>
           </div>
           <div class="jumbotron-item">
