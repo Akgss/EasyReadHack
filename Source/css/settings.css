@@ -4,10 +4,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
   font-family: 'Open Sans', sans-serif;
   background-color: #374148;
-  color: #86909A;
+  color: bisque;
 }
 
 form {
@@ -23,13 +22,15 @@ h1 {
 }
 
 label {
-  
+  margin-top: 50;
+  font-size: 30px;
   text-align: right; /* change to right */
 }
 
 input[type="text"],
 input[type="email"],
 textarea {
+  
   resize: none;
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -46,6 +47,23 @@ textarea:focus {
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+.icon {
+  position: absolute;
+  top: 250px;
+  left: 250px;
+  font-size: 300px;
+  color:bisque;
+}
+
+.icon2 {
+  position: absolute;
+  top: 250px;
+  right: 150px;
+  font-size: 300px;
+  color:bisque;
+}
+
 
 
 @media (min-width: 600px) {
