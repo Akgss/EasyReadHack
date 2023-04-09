@@ -25,7 +25,7 @@ appId: "1:800885245577:web:b3e30ff43b040f991c6858"
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-const database = getDatabase(app);
+const database = getDatabase(app);  
 
 submitData.addEventListener('click', (e) => {
 
@@ -37,6 +37,7 @@ submitData.addEventListener('click', (e) => {
         .then((userCredential) => {
             // Signed in
             const user = userCredential.user;
+           
             // ... user.uid
             set(ref(database, 'users/' + user.uid), {
                 email: email,
