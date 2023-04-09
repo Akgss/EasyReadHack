@@ -24,37 +24,9 @@ Todo list;
 
 }
 
-textarea {
-    pointer-events: none;
-    padding: 10px;
-    width: 100%;
-    height: 300;
-    border: none;
-    border-radius: 10px;
-    background-color: #374148;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-size: 16px;
-    color: #86909A;
-    outline: none;
-    resize: none;
-}
-
 .footer .user .user-icon .username {
     margin-left: 0;
 }
-
-/* Add a hover effect */
-textarea:hover {
-    background-color: #86909A;
-}
-
-/* Add a focus effect */
-textarea:focus {
-    background-color: #86909A;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px #007FFF;
-}
-
-
 
 button[type="msghistory"] {
     display: inline-block;
