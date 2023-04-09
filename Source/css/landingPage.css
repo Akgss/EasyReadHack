@@ -455,9 +455,10 @@ body {
     height: 50px;
     line-height: 50px;
     font-weight: 300;
-    font-size: 18px;
+    font-size: 22px;
     float: left;
-    margin-left: 100px;
+    margin-left: 90px;
+    color: #9CC3D5FF;
 }
 
 .container .content .page .grid .card-verticle {
@@ -488,13 +489,14 @@ body {
 .container .content .page .grid .card-verticle .card-small .title {
     display: block;
     position: relative;
-    width: 100%;
-    height: 40px;
-    line-height: 40px;
-    color: var(--text-secondary);
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: 300;
+    font-size: 22px;
+    float: left;
+    margin-left: 80px;
+    margin-top: -15px;
+    color: #ADEFD1FF;
 }
 
 .container .content .page .grid .card-verticle .card-small .icon-container2 {
@@ -502,7 +504,7 @@ body {
     width: 100%;
     height: 50px;
     margin-left: 3520;
-    margin-bottom: 4000px;
+    margin-top: -5px;
     transform: scale(25);
 }
 
