@@ -1,70 +1,60 @@
 <!DOCTYPE html>
 <html>
 
-<link rel="stylesheet"  href="./css/register.css">
-<style> 
+<link rel="stylesheet" href="./css/register.css">
+<style>
 
 </style>
 
 <div class="page">
-<form>
-    <div class="container">
-        <div class="left">
-            <h1 class = "register" >Login</h1>
-            <p><a class = "eula" href="register.html">Not a user? Sign Up!</a></p>
+    <form>
+        <div class="container">
+            <div class="left">
+                <h1 class="register">Login</h1>
+                <p><a class="eula" href="register.html">Not a user? Sign Up!</a></p>
 
-        </div>
-        <div class="right">
-            <svg viewBox="0 0 320 300">
-                <defs>
-                  <linearGradient
-                                  inkscape:collect="always"
-                                  id="linearGradient"
-                                  x1="13"
-                                  y1="193.49992"
-                                  x2="307"
-                                  y2="193.49992"
-                                  gradientUnits="userSpaceOnUse">
-                    <stop
-                          style="stop-color:#738adb;"
-                          offset="0"
-                          id="stop876" />
-                    <stop
-                          style="stop-color:#00b2c9;"
-                          offset="1"
-                          id="stop878" />
-                  </linearGradient>
-                </defs>
-                <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
-              </svg>
-        <div class="form">
-            <label for="email">Email</label>
-            <input type="email" id="email">
-            <label for="password">Password</label>
-            <input type="password" id="password">
-        
-            
-        <button type="button" id="submitData" name="submitData" class="registerbtn">Login</button>
+            </div>
+            <div class="right">
+                <svg viewBox="0 0 320 300">
+                    <defs>
+                        <linearGradient inkscape:collect="always" id="linearGradient" x1="13" y1="193.49992" x2="307"
+                            y2="193.49992" gradientUnits="userSpaceOnUse">
+                            <stop style="stop-color:#738adb;" offset="0" id="stop876" />
+                            <stop style="stop-color:#00b2c9;" offset="1" id="stop878" />
+                        </linearGradient>
+                    </defs>
+                    <path
+                        d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+                </svg>
+                <div class="form">
+                    <label for="email">Email</label>
+                    <input type="email" id="email">
+                    <label for="password">Password</label>
+                    <input type="password" id="password">
+
+
+                    <button type="button" id="submitData" name="submitData" class="registerbtn">Login</button>
     </form>
-    </div>
-        </div>
-    </div>
+</div>
+</div>
+</div>
 
 
 </div>
 </body>
+
 </html>
 
 <script type="module">
     // Import the functions you need from the SDKs you need
-    import {initializeApp} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
     import {
         getAuth,
         createUserWithEmailAndPassword,
         signInWithEmailAndPassword,
         signOut
     } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
-    import {getDatabase, set, ref, update} from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
 
     // TODO: Add SDKs for Firebase products that you want to use
@@ -73,11 +63,11 @@
     // Your web app's Firebase configuration
     const firebaseConfig = {
         apiKey: "AIzaSyC1KeHaRKifGhYr124Q3gXNZnvXdw66GLc",
-  authDomain: "easyreadlogin.firebaseapp.com",
-  projectId: "easyreadlogin",
-  storageBucket: "easyreadlogin.appspot.com",
-  messagingSenderId: "800885245577",
-  appId: "1:800885245577:web:b3e30ff43b040f991c6858"
+        authDomain: "easyreadlogin.firebaseapp.com",
+        projectId: "easyreadlogin",
+        storageBucket: "easyreadlogin.appspot.com",
+        messagingSenderId: "800885245577",
+        appId: "1:800885245577:web:b3e30ff43b040f991c6858"
     };
 
     // Initialize Firebase
@@ -104,11 +94,12 @@
                     .then(() => {
                         // Data saved successfully!
                         alert('user logged in successfully');
+                        window.location.href = "landingPage.html"
 
                     })
                     .catch((error) => {
                         // The write failed...
-                       
+
                     });
             })
             .catch((error) => {
